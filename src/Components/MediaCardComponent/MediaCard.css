@@ -11,3 +11,7 @@
     overflow-y: scroll;
     overflow-wrap: break-word;
 }
+
+.MediaCardAvatar {
+    background-color: red;
+}

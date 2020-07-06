@@ -1,31 +1,30 @@
 import React from 'react';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
-import './MediaCard.css';
 
-interface IMediaCardProps {
-    ImageUrl: string | undefined;
-    Description: string | undefined;
+import {Card, CardContent, CardMedia, CardHeader, Avatar, Typography} from '@material-ui/core';
+import './MediaCard.css';
+import { Job } from '../../Common/Types';
+
+type MediaCardProps = {
+    Job: Job
 }
 
-function MediaCard(props: IMediaCardProps) {
+function MediaCard(props: MediaCardProps) {
     return (
         <div>
             <Card className="MediaCardContainer">
-                <CardActionArea>
-                    <CardMedia
-                        className="MediaCardImage"
-                        image={props.ImageUrl}
-                    />
-                    <CardContent>
-                        <Typography variant="body2" color="textSecondary" component="p" className="MediaCardDescription">
-                            {props.Description}
-                        </Typography>
-                    </CardContent>
-                </CardActionArea>
+                <CardHeader
+                    avatar={
+                        <Avatar aria-label="recipe" className="MediaCardAvatar">R</Avatar>
+                    }
+                    title="Shrimp and Chorizo Paella"
+                    subheader="September 14, 2016"
+                />
+                <CardContent>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        This impressive paella is a perfect party dish and a fun meal to cook together with your
+                        guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                    </Typography>
+                </CardContent>
             </Card>
         </div>
     )
