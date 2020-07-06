@@ -1,13 +1,13 @@
 import React, { useState, useEffect, createContext } from 'react'
-import { Props, JobsInput, Job } from '../Common/Types'
+import { Props, JobsInput, Job, JobsContextType } from '../Common/Types'
 import JobsQuery from '../GraphQL/JobsQuery';
 import { useQuery } from '@apollo/react-hooks';
 
-const JobsContext = createContext({});
+const JobsContext = createContext({} as JobsContextType);
 
 const JobsProvider = ({ children }: Props) => {
 
-    const [jobs, setJobs] = useState<Job|null>(null)
+    const [jobs, setJobs] = useState<Job[]|null>(null)
     const [search, setSearch] = useState("")
     const [slug, setSlug] = useState("")
     const [type, setType] = useState("")
@@ -18,8 +18,8 @@ const JobsProvider = ({ children }: Props) => {
 
     useEffect(() => {
         if (error == null && data != null) {
-            setJobs(data)
-            console.log(data)
+            setJobs(data.jobs)
+            console.log(data.jobs)
         }
     }, [data, error]);
 

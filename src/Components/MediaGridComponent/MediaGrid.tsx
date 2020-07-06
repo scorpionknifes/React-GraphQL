@@ -7,10 +7,11 @@ import { JobsContext } from '../../Contexts/JobsContext';
 
 
 const MediaGrid = () => {
-    const { jobs } = useContext(JobsContext)
+    const {jobs} = useContext(JobsContext)
 
     var Cards: JSX.Element[] = [];
-    jobs.forEach((job: Job, i: Number) => {
+    console.log([1,2,3,4])
+    jobs?.forEach((job: Job, i: Number) => {
         if (!job) {
             return;
         }

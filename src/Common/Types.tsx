@@ -11,19 +11,26 @@ export type Props = {
 
 export type Job = {
     applyUrl: string,
-    cities: Names,
+    cities: Names[],
     commitment: {title: string},
     company: {
         name: string,
         logoUrl: (string | null),
     }
-    countries: Names,
+    countries: Names[],
     description: string,
     slug: string,
-    tags: Names,
+    tags: Names[],
     title: string,
 }
 
-type Names = [{
+export type JobsContextType = {
+    search: string, setSearch: (a: string)=>void,
+    slug: string, setSlug: (a: string)=>void,
+    type: string, setType: (a: string)=>void,
+    jobs: Job[]|null
+}
+
+type Names = {
     name: string,
-}]
+}

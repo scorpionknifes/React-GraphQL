@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Card, CardContent, CardMedia, CardHeader, Avatar, Typography} from '@material-ui/core';
+import {Card, CardContent, CardHeader, Avatar, Typography} from '@material-ui/core';
 import './MediaCard.css';
 import { Job } from '../../Common/Types';
 
