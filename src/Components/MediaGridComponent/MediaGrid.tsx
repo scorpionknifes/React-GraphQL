@@ -17,7 +17,7 @@ const MediaGrid = () => {
             return;
         }
         Cards.push(
-            <Grid key={"card_" + i} item sm={6} md={4} lg={3} spacing={2} className="MediaGridCard">
+            <Grid key={"card_" + i} item sm={6} md={4} lg={3} container spacing={2} className="MediaGridCard">
                 <MediaCard Job={job} />
             </Grid>)
     })
@@ -25,7 +25,7 @@ const MediaGrid = () => {
     return (
         <div>
             <Grid container spacing={3} className="MediaGridContainer">
-                {loading? <Spinner/> : Cards==[]? <div>No Jobs Found</div>:Cards}
+                {loading? <Spinner/> : Cards===[]? <div>No Jobs Found</div>:Cards}
             </Grid>
         </div>
     )

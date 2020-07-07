@@ -1,13 +1,17 @@
 .MediaCardContainer{
     display: block;
     min-width: 200px;
+    width: 100%;
+    height: 100%;
     padding-top: 20px;
     padding-right: 10px;
     padding-left: 10px;
+    margin: 0px !important;
 }
 .MediaCardImage{
     height: 200px !important;
 }
+
 .MediaCardDescription{
     height: 200px;
     overflow-y: scroll;
@@ -17,4 +21,29 @@
 .MediaCardAvatar {
     background-color: red;
     margin: 10px !important;
+}
+
+.MediaCardAvatarBox {
+    display: block !important;
+    margin: 0px !important;
+}
+
+.MediaCardAvatarInner {
+    max-height: 100px;
+}
+
+.MediaCardTags {
+    margin: 0px !important;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.MediaCardTag {
+    margin: 2px !important;
+}
+
+.MediaCardApplyButton {
+    margin: auto !important;
 }
