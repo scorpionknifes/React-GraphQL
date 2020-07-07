@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Card, CardContent, CardHeader, Avatar, Typography} from '@material-ui/core';
+import { Card, Grid, CardContent, CardHeader, Avatar, Typography } from '@material-ui/core';
 import './MediaCard.css';
 import { Job } from '../../Common/Types';
 
@@ -9,24 +9,32 @@ type MediaCardProps = {
 }
 
 function MediaCard(props: MediaCardProps) {
+    const { Job } = props;
     return (
-        <div>
-            <Card className="MediaCardContainer">
-                <CardHeader
-                    avatar={
-                        <Avatar aria-label="recipe" className="MediaCardAvatar">R</Avatar>
+        <Card className="MediaCardContainer">
+            <Grid container direction="row" justify="center" alignItems="center">
+                <Grid xs={3}>
+                    {
+                        !Job.company.logoUrl || Job.company.logoUrl === "" ?
+                            <Avatar aria-label="recipe" className="MediaCardAvatar">{Job.company.name.charAt(0)}</Avatar> :
+                            <Avatar alt="Remy Sharp" src={Job.company.logoUrl} />
                     }
-                    title="Shrimp and Chorizo Paella"
-                    subheader="September 14, 2016"
-                />
+
+                </Grid>
+                <Grid xs={9} container direction="column" justify="center" alignItems="flex-start">
+                    <>
+                        <span><b>{Job.title}</b> </span>
+                        <span>at {Job.company.name} </span>
+                    </>
+                </Grid>
                 <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        This impressive paella is a perfect party dish and a fun meal to cook together with your
-                        guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                        {Job.description}
                     </Typography>
                 </CardContent>
-            </Card>
-        </div>
+            </Grid>
+
+        </Card>
     )
 }
 

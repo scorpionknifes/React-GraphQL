@@ -21,10 +21,11 @@ const JobsProvider = ({ children }: Props) => {
             setJobs(data.jobs)
             console.log(data.jobs)
         }
-    }, [data, error]);
+    }, [data, error, loading]);
 
     return (
         <JobsContext.Provider value={{
+            loading,
             search, setSearch,
             slug, setSlug,
             type, setType,

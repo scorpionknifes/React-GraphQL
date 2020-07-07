@@ -25,6 +25,7 @@ export type Job = {
 }
 
 export type JobsContextType = {
+    loading: boolean,
     search: string, setSearch: (a: string)=>void,
     slug: string, setSlug: (a: string)=>void,
     type: string, setType: (a: string)=>void,

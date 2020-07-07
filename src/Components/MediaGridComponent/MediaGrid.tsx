@@ -4,10 +4,11 @@ import { Grid } from '@material-ui/core';
 import './MediaGrid.css';
 import { Job } from '../../Common/Types';
 import { JobsContext } from '../../Contexts/JobsContext';
+import Spinner from '../SpinnerComponent/SpinnerComponent';
 
 
 const MediaGrid = () => {
-    const {jobs} = useContext(JobsContext)
+    const {jobs, loading} = useContext(JobsContext)
 
     var Cards: JSX.Element[] = [];
     console.log([1,2,3,4])
@@ -16,7 +17,7 @@ const MediaGrid = () => {
             return;
         }
         Cards.push(
-            <Grid key={"card_" + i} item sm={6} md={4} lg={3} className="MediaGridCard">
+            <Grid key={"card_" + i} item sm={6} md={4} lg={3} spacing={2} className="MediaGridCard">
                 <MediaCard Job={job} />
             </Grid>)
     })
@@ -24,7 +25,7 @@ const MediaGrid = () => {
     return (
         <div>
             <Grid container spacing={3} className="MediaGridContainer">
-                {Cards}
+                {loading? <Spinner/> : Cards==[]? <div>No Jobs Found</div>:Cards}
             </Grid>
         </div>
     )
