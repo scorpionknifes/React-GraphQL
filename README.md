@@ -14,6 +14,7 @@ The following project uses:
 [Microsoft Student Accelerator](http://aka.ms/nzmsawebsite)
 [2020-Phase-1](https://github.com/NZMSA/2020-Phase-1)
 
+![](https://scorpionknifes.github.io/React-GraphQL/example.jpg)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
