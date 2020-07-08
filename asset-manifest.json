@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/React-GraphQL/static/css/main.19b86f77.chunk.css",
+    "main.js": "/React-GraphQL/static/js/main.e3557315.chunk.js",
+    "main.js.map": "/React-GraphQL/static/js/main.e3557315.chunk.js.map",
+    "runtime-main.js": "/React-GraphQL/static/js/runtime-main.27f87f7f.js",
+    "runtime-main.js.map": "/React-GraphQL/static/js/runtime-main.27f87f7f.js.map",
+    "static/js/2.d7911e47.chunk.js": "/React-GraphQL/static/js/2.d7911e47.chunk.js",
+    "static/js/2.d7911e47.chunk.js.map": "/React-GraphQL/static/js/2.d7911e47.chunk.js.map",
+    "index.html": "/React-GraphQL/index.html",
+    "precache-manifest.1be3190d9276e524ebb9876012251dc1.js": "/React-GraphQL/precache-manifest.1be3190d9276e524ebb9876012251dc1.js",
+    "service-worker.js": "/React-GraphQL/service-worker.js",
+    "static/css/main.19b86f77.chunk.css.map": "/React-GraphQL/static/css/main.19b86f77.chunk.css.map",
+    "static/js/2.d7911e47.chunk.js.LICENSE.txt": "/React-GraphQL/static/js/2.d7911e47.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.27f87f7f.js",
+    "static/js/2.d7911e47.chunk.js",
+    "static/css/main.19b86f77.chunk.css",
+    "static/js/main.e3557315.chunk.js"
+  ]
+}
