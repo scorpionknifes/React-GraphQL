@@ -1,5 +1,7 @@
 # React GraphQL Jobs
 
+[Hosted on Github Pages](http://scorpionknifes.github.io/React-GraphQL)
+
 This project is an assignment for Microsoft Student Accelerator NZ 2020 Phase 1.
 Front End Development - React Web App.
 
