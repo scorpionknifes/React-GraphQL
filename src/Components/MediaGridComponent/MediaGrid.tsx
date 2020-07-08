@@ -11,7 +11,6 @@ const MediaGrid = () => {
     const {jobs, loading} = useContext(JobsContext)
 
     var Cards: JSX.Element[] = [];
-    console.log([1,2,3,4])
     jobs?.forEach((job: Job, i: Number) => {
         if (!job) {
             return;
@@ -25,7 +24,7 @@ const MediaGrid = () => {
     return (
         <div>
             <Grid container spacing={3} className="MediaGridContainer">
-                {loading? <Spinner/> : Cards===[]? <div>No Jobs Found</div>:Cards}
+                {loading? <Spinner/> : Cards===[]||!jobs? <div>No Jobs Found</div>:Cards}
             </Grid>
         </div>
     )

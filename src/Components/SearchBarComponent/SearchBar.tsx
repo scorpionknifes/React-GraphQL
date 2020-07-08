@@ -1,18 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { Grid, TextField, Button } from '@material-ui/core'
+import SearchQuery from '../../GraphQL/SearchQuery'
+import { useQuery } from '@apollo/react-hooks'
+import { LocationsInput } from '../../Common/Types'
 import './SearchBar.css';
+import { JobsContext } from '../../Contexts/JobsContext'
 
 const SearchBar = () => {
-
     const [HasFocus, setHasFocus] = useState<boolean>(false);
-
-    const [SearchQuery, setSearchQuery] = useState<string | null>("");
-    const handleSearchQueryChange = (s: string | null) => {
-        setSearchQuery(s);
-    }
-
-    const handleSubmit = () => {
-        console.log(SearchQuery);
+    const [search, setSearch] = useState("")
+    const { setJobs, handleSearch } = useContext(JobsContext)
+    
+    const handleSubmit = () =>{
+        handleSearch(search)
     }
 
     return <div className="SearchBarContainer">
@@ -23,10 +23,10 @@ const SearchBar = () => {
                     id="outlined-required"
                     label="Location"
                     variant="outlined"
-                    error={HasFocus && SearchQuery === ""}
+                    error={HasFocus && search === ""}
                     onClick={() => setHasFocus(true)}
-                    value={SearchQuery}
-                    onChange={e => handleSearchQueryChange(e.target.value)}
+                    value={search}
+                    onChange={e => setSearch(e.target.value)}
                 />
             </Grid>
             <Grid item xs={6} sm={3}>

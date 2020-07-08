@@ -18,7 +18,7 @@ const MediaCard = (props: MediaCardProps) => {
                         {
                             !Job.company.logoUrl || Job.company.logoUrl === "" ?
                                 <Avatar aria-label="recipe" className="MediaCardAvatar">{Job.company.name.charAt(0)}</Avatar> :
-                                <Avatar alt="Remy Sharp" src={Job.company.logoUrl} />
+                                <Avatar alt="Remy Sharp" className="MediaCardAvatar" src={Job.company.logoUrl} />
                         }
 
                     </Grid>

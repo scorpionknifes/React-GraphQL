@@ -1,8 +1,12 @@
-import {ReactNode} from 'react'
+import { ReactNode } from 'react'
 
 export type JobsInput = {
     type: string,       // city, remote, country
     slug: string
+}
+
+export type LocationsInput = {
+    value: string
 }
 
 export type Props = {
@@ -12,7 +16,7 @@ export type Props = {
 export type Job = {
     applyUrl: string,
     cities: Names[],
-    commitment: {title: string},
+    commitment: { title: string },
     company: {
         name: string,
         logoUrl: (string | null),
@@ -26,10 +30,10 @@ export type Job = {
 
 export type JobsContextType = {
     loading: boolean,
-    search: string, setSearch: (a: string)=>void,
-    slug: string, setSlug: (a: string)=>void,
-    type: string, setType: (a: string)=>void,
-    jobs: Job[]|null
+    slug: string, setSlug: (a: string) => void,
+    type: string, setType: (a: string) => void,
+    jobs: Job[] | null, setJobs: (a: Job[] | null) => void,
+    handleSearch: (a: string) => void,
 }
 
 type Names = {
