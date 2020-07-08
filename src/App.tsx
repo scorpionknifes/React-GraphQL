@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
-import SearchBar from './Components/SearchBarComponent/SearchBar';
-import MediaGrid from './Components/MediaGridComponent/MediaGrid';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core';
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
+import { SearchBar, MediaGrid, AppBar } from './Components';
 import { JobsProvider } from './Contexts/JobsContext';
 
 const client = new ApolloClient({
@@ -29,7 +28,7 @@ const App = () => {
             <ApolloProvider client={client}>
                 <JobsProvider>
                     <MuiThemeProvider theme={theme}>
-                        <SearchBar />
+                        <AppBar />
                         <MediaGrid />
                     </MuiThemeProvider>
                 </JobsProvider>

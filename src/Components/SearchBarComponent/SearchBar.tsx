@@ -1,8 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { Grid, TextField, Button } from '@material-ui/core'
-import SearchQuery from '../../GraphQL/SearchQuery'
-import { useQuery } from '@apollo/react-hooks'
-import { LocationsInput } from '../../Common/Types'
 import './SearchBar.css';
 import { JobsContext } from '../../Contexts/JobsContext'
 
@@ -17,8 +14,9 @@ const SearchBar = () => {
 
     return <div className="SearchBarContainer">
         <Grid container spacing={3}>
-            <Grid item xs={6} sm={3}>
+            <Grid item xs={6} sm={6}>
                 <TextField
+                    className="SearchTextField"
                     required
                     id="outlined-required"
                     label="Location"
@@ -29,7 +27,7 @@ const SearchBar = () => {
                     onChange={e => setSearch(e.target.value)}
                 />
             </Grid>
-            <Grid item xs={6} sm={3}>
+            <Grid item xs={6} sm={6}>
                 <Button variant="contained" color="primary" onClick={handleSubmit}>Submit</Button>
             </Grid>
         </Grid>
