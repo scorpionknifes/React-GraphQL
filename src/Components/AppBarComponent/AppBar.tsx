@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar, Toolbar, IconButton, Typography, Button } from '@material-ui/core'
+import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core'
 import SearchBar from '../SearchBarComponent/SearchBar'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import './AppBar.css'

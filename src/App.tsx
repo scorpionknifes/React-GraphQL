@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core';
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
-import { SearchBar, MediaGrid, AppBar } from './Components';
+import { MediaGrid, AppBar } from './Components';
 import { JobsProvider } from './Contexts/JobsContext';
 
 const client = new ApolloClient({

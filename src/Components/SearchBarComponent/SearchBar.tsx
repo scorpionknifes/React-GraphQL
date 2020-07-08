@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import { Grid, TextField, Button } from '@material-ui/core'
 import './SearchBar.css';
 import { JobsContext } from '../../Contexts/JobsContext'
@@ -6,7 +6,7 @@ import { JobsContext } from '../../Contexts/JobsContext'
 const SearchBar = () => {
     const [HasFocus, setHasFocus] = useState<boolean>(false);
     const [search, setSearch] = useState("")
-    const { setJobs, handleSearch } = useContext(JobsContext)
+    const { handleSearch } = useContext(JobsContext)
     
     const handleSubmit = () =>{
         handleSearch(search)
