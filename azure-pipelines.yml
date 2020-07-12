@@ -7,7 +7,7 @@ trigger:
 - master
 
 variables:
-  rootDir: ''
+  rootDir: '.'
   buildDir: '$(rootDir)/build'
 
 pool:
