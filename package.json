@@ -1,6 +1,6 @@
 {
   "name": "graphql-jobs-msa-web-app",
-  "homepage": "http://scorpionknifes.github.io/React-GraphQL",
+  "homepage": "https://react-graphql.azurewebsites.net/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

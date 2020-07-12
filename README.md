@@ -1,5 +1,6 @@
 # React GraphQL Jobs
 
+[Hosted on Azure](https://react-graphql.azurewebsites.net/)
 [Hosted on Github Pages](http://scorpionknifes.github.io/React-GraphQL)
 
 This project is an assignment for Microsoft Student Accelerator NZ 2020 Phase 1.
