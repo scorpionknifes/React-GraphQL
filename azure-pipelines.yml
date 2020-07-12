@@ -7,7 +7,7 @@ trigger:
 - master
 
 variables:
-  rootDir: 'my-app'
+  rootDir: 'React-GraphQL'
   buildDir: '$(rootDir)/build'
 
 pool:
