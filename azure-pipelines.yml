@@ -11,13 +11,12 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: 1ESLighthouseEng.PipelineArtifactCaching.RestoreAndSaveCacheV1.RestoreAndSaveCache@1
-  displayName: 'Restore and save artifact based on: **/package-lock.json, !**/node_modules/**/package-lock.json'
+- task: Cache@2
+  displayName: Cache
   inputs:
-    keyfile: '**/package-lock.json, !**/node_modules/**/package-lock.json'
-    targetfolder: '**/node_modules, !**/node_modules/**/node_modules'
-    vstsFeed: '0657ed4c-f114-42ec-96c7-f2bb62b84e13'
-    platformIndependent: true
+    key: './yarn.lock'
+    path: './node_modules'
+    cacheHitVar: CacheRestored
 
 - bash: yarn install
   displayName: Install Dependencies
