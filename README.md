@@ -1,5 +1,7 @@
 # React GraphQL Jobs
 
+[![Build Status](https://dev.azure.com/chengzhenyang/React-GraphQL/_apis/build/status/scorpionknifes.React-GraphQL?branchName=master)](https://dev.azure.com/chengzhenyang/React-GraphQL/_build/latest?definitionId=1&branchName=master)
+
 [Hosted on Azure](https://react-graphql.azurewebsites.net/)
 
 [Hosted on Github Pages](http://scorpionknifes.github.io/React-GraphQL)
@@ -17,6 +19,14 @@ The following project uses:
 [2020-Phase-1](https://github.com/NZMSA/2020-Phase-1)
 
 ![](https://scorpionknifes.github.io/React-GraphQL/example.jpg)
+
+#### Azure Pipelines
+
+Azure build pipeline creates releases when new commits to ```develop``` and ```master``` branches
+
+Azure release pipeline deploy ```master``` branch to [Azure Web App](https://react-graphql.azurewebsites.net/)
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
