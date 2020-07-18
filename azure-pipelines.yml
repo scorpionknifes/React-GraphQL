@@ -7,29 +7,31 @@ trigger:
 - master
 - develop
 
-variables:
-  rootDir: '.'
-  buildDir: '$(rootDir)/build'
-
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+variables:
+  - name: CacheRestored
+    value: 'false' 
 
-- script: |
-    cd $(rootDir)
-    npm install
-    npm run build
-    cd ..
-  displayName: 'npm install and build'
+steps:
+- task: Cache@2
+  displayName: Cache
+  inputs:
+    key: 'yarn | $(Agent.OS) | ./yarn.lock'
+    path: './node_modules'
+    cacheHitVar: CacheRestored
+
+- script: yarn install
+  displayName: Install Dependencies
+  condition: ne(variables['CacheRestored'], 'true')
+
+- script: yarn run build
+  displayName: Build application
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(buildDir)'
+    rootFolderOrFile: './build'
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
