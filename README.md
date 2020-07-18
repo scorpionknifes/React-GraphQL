@@ -26,7 +26,7 @@ Azure build pipeline creates releases when new commits to ```develop``` and ```m
 
 Azure release pipeline deploy ```master``` branch to [Azure Web App](https://react-graphql.azurewebsites.net/)
 
-Caching of ```node_modules``` is enabled in this project for faster build time
+Caching of ```node_modules``` is enabled in this project with artifacts for faster build time
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
